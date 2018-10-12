@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Crunch Sub Decompiler
 // @namespace    none
-// @version      2.0.0
+// @version      2.0.1
 // @description  It saves subs, yay!
 // @author       https://github.com/NIK220V
 // @homepage     https://github.com/NIK220V/crunch-decompile-js
@@ -28,11 +28,11 @@ function CrunchDecompiler(){
     // Получает текст сабов по ссылке
     function getSubtitles(url, callback = function(e){console.log(e);}, btn){
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, false);
-        xhr.setRequestHeader('DNT', '1');
+        xhr.open('GET', url, true);
+        /*xhr.setRequestHeader('DNT', '1');
         xhr.setRequestHeader('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36');
         xhr.setRequestHeader('Referer', 'https://static.crunchyroll.com/vilos/libass/both/subtitles-octopus-worker.js');
-        xhr.setRequestHeader('Origin', 'null');
+        xhr.setRequestHeader('Origin', 'null');*/
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 callback(xhr.responseText, btn);
