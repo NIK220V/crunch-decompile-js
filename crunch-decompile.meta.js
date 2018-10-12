@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Crunch Sub Decompiler
 // @namespace    none
-// @version      2.0.0
+// @version      2.0.1
 // @description  It saves subs, yay!
 // @author       https://github.com/NIK220V
 // @homepage     https://github.com/NIK220V/crunch-decompile-js
